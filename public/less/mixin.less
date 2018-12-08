@@ -1,0 +1,23 @@
+//一倍尺寸字体，比如750下的28px字体，使用14px
+.mix-fontsize(@size){
+    font-size: @size;
+    @media screen and (min-width: 320px){
+        font-size: round(320/375 * @size);
+    }
+    @media screen and (min-width: 360px){
+        font-size: round(360/375 * @size);
+    }
+    @media screen and (min-width: 375px){
+        font-size: @size;
+    }
+    @media screen and (min-width: 414px){
+        font-size: round(414/375 * @size);
+    }
+    @media screen and (min-width: 640px){
+        font-size: round(640/375 * @size);
+    }
+    @media screen and (min-width: 750px){
+        font-size: round(2 * @size);
+    }
+}
+@base: 1/75rem;
